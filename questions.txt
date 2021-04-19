@@ -1,0 +1,32 @@
+Как сделать opacity, переходящий в цветной background developmentMenuImage_bg
+Разные размеры у чексбоксов в мобильной версии
+
+
+
+filter gray scale
+
+
+function validate() {
+	let userName = document.forms['form']['userName'].value;
+	let userEmail = document.forms['form']['userEmail'].value;
+
+	if (userName.length==0) {
+		document.getElementById('errorName').innerHTML = 'Введите, пожалуйста, имя.';
+		return false;
+	}
+
+	if (userEmail.length==0) {
+		document.getElementById('errorEmail').innerHTML = 'Введите, пожалуйста, email.';
+		return false;
+	}
+
+	at=userEmail('@');
+	dot=userEmail('.');
+	if (at<1 || dot <1) {
+		document.getElementById('errorEmail').innerHTML = 'Некорректный email.';
+		return false;
+	}
+};
+
+В данном скрипте не налажена работа отображения ошибок, последовательность, присутсвует перегрузка страницы
+___________________________
